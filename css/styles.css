@@ -67,14 +67,18 @@ a{color:inherit;text-decoration:none}
 .trust{padding:30px 0 10px;border-bottom:1px solid var(--line)}
 .trust__label{text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.14em;
   text-transform:uppercase;margin-bottom:20px}
-.trust__logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px 42px}
+.trust__logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 16px}
 .trust__logo{font-family:'Sora',sans-serif;font-weight:700;font-size:1.3rem;color:var(--text);
   opacity:.6;letter-spacing:.01em;transition:.25s}
 .trust__logo:hover{opacity:1;color:var(--gold)}
 .trust__more{color:var(--muted);font-size:.95rem;font-style:italic;opacity:.7}
-.brand{font-family:'Sora',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:.01em;
-  display:inline-flex;transition:.25s;cursor:default}
-.brand:hover{transform:translateY(-3px)}
+.brand-chip{display:inline-flex;align-items:center;gap:9px;padding:7px 16px 7px 7px;
+  border:1px solid var(--line);border-radius:999px;background:var(--card);transition:.25s}
+.brand-chip:hover{transform:translateY(-3px);border-color:rgba(212,175,55,.35);box-shadow:0 12px 30px rgba(0,0,0,.35)}
+.brand-ico{width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;
+  justify-content:center;font-size:1.05rem;flex-shrink:0}
+.brand{font-family:'Sora',sans-serif;font-weight:800;font-size:1.2rem;letter-spacing:.01em;
+  display:inline-flex;cursor:default}
 .brand span{transition:.25s}
 
 /* SECTIONS */
