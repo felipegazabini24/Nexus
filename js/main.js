@@ -52,3 +52,20 @@ toggle?.addEventListener('click', () => {
   links.style.display = open ? '' : 'flex';
   links.style.cssText += open ? '' : 'position:absolute;top:72px;right:24px;flex-direction:column;background:#101018;padding:20px;border:1px solid rgba(255,255,255,.08);border-radius:14px;';
 });
+
+// Marcas: letras alternadas con el color de cada marca (una pintada, una blanca)
+document.querySelectorAll('.brand').forEach((el) => {
+  const color = el.dataset.color || '#d4af37';
+  const text = el.textContent;
+  el.textContent = '';
+  let k = 0;
+  [...text].forEach((ch) => {
+    const s = document.createElement('span');
+    s.textContent = ch;
+    if (ch !== ' ') {
+      s.style.color = k % 2 === 0 ? color : '#f4f4f6';
+      k++;
+    }
+    el.appendChild(s);
+  });
+});
