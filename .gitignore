@@ -12,3 +12,6 @@ node_modules/
 dist/
 .env
 *.log
+
+# Confidencial — NO subir nunca (precios internos, márgenes)
+PRECIOS-INTERNO.md

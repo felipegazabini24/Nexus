@@ -11,8 +11,15 @@ Nexus/
 └─ assets/         # Imágenes, logos, recursos
 ```
 
+## Páginas del sitio
+- `index.html` — Landing principal
+- `planes.html` — Planes de marketing (₲ 800.000 / 1.500.000 / 2.000.000)
+
+## Sistema operativo en Notion
+Todo el negocio (CRM, ventas, campañas, scripts, procesos) está documentado en **[SISTEMA-NOTION.md](SISTEMA-NOTION.md)**.
+
 ## Pendientes / por personalizar
-- [ ] Número real de WhatsApp (en `index.html`, buscar `595000000000`)
+- [x] Número real de WhatsApp (0983139324 → `wa.me/595983139324`)
 - [ ] Correo de contacto (`hola@nexus.com`)
 - [ ] Logo e imágenes reales en `/assets`
 - [ ] Testimonios y estadísticas reales
