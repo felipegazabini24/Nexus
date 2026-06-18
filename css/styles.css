@@ -1,11 +1,11 @@
 /* ===== NEXUS — Premium Marketing Landing ===== */
 :root{
-  --bg:#0a0a0f;
-  --bg-soft:#101018;
-  --card:#14141d;
-  --line:rgba(255,255,255,.08);
-  --text:#f4f4f6;
-  --muted:#9a9aa8;
+  --bg:#16161f;
+  --bg-soft:#1e1e2a;
+  --card:#242432;
+  --line:rgba(255,255,255,.14);
+  --text:#f7f7fa;
+  --muted:#c4c4d2;
   --gold:#d4af37;
   --gold-soft:#f0d98c;
   --grad:linear-gradient(120deg,#f0d98c,#d4af37 55%,#b8860b);
