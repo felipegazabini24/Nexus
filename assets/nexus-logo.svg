@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 160" width="560" height="160" role="img" aria-label="Nexus">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#23232f"/>
+      <stop offset="1" stop-color="#121219"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbeec0"/>
+      <stop offset="0.48" stop-color="#f0d277"/>
+      <stop offset="1" stop-color="#e0bd4e"/>
+    </linearGradient>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&amp;display=swap');
+      .wm{font-family:'Sora','Segoe UI',sans-serif;font-weight:800;font-size:78px;letter-spacing:2px;}
+    </style>
+  </defs>
+
+  <!-- marca -->
+  <g transform="translate(20,20)">
+    <rect x="0" y="0" width="120" height="120" rx="28" fill="url(#tile)"/>
+    <rect x="0.75" y="0.75" width="118.5" height="118.5" rx="27.25" fill="none" stroke="url(#gold)" stroke-opacity="0.55" stroke-width="1.5"/>
+    <path d="M37 85 L37 37 L83 85 L83 37" fill="none" stroke="url(#gold)" stroke-width="10.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="83" cy="37" r="3" fill="#fbeec0"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="162" y="108" class="wm" fill="#f7f7fa">NEXUS<tspan fill="url(#gold)">.</tspan></text>
+</svg>
