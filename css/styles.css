@@ -6,9 +6,9 @@
   --line:rgba(255,255,255,.14);
   --text:#f7f7fa;
   --muted:#c4c4d2;
-  --gold:#d4af37;
-  --gold-soft:#f0d98c;
-  --grad:linear-gradient(120deg,#f0d98c,#d4af37 55%,#b8860b);
+  --gold:#e6c45a;
+  --gold-soft:#f6e6a8;
+  --grad:linear-gradient(120deg,#fbeec0,#f0d277 48%,#e0bd4e);
   --radius:18px;
   --maxw:1140px;
 }
