@@ -1,5 +1,8 @@
 // ===== NEXUS — interactions =====
 
+// ¿El usuario prefiere menos movimiento?
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // Año dinámico
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -27,6 +30,7 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
 const animateCount = (el) => {
   const target = parseFloat(el.dataset.count);
   const decimals = target % 1 !== 0 ? 1 : 0;
+  if (reduceMotion) { el.textContent = target.toFixed(decimals); return; }
   const dur = 1400;
   const start = performance.now();
   const tick = (now) => {
@@ -44,14 +48,17 @@ const statObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.6 });
 document.querySelectorAll('[data-count]').forEach((el) => statObs.observe(el));
 
-// Menú móvil (simple toggle de los links)
+// Menú móvil: alterna la clase .open (la posición la maneja el CSS)
 const toggle = document.querySelector('.nav__toggle');
 const links = document.querySelector('.nav__links');
-toggle?.addEventListener('click', () => {
-  const open = links.style.display === 'flex';
-  links.style.display = open ? '' : 'flex';
-  links.style.cssText += open ? '' : 'position:absolute;top:72px;right:24px;flex-direction:column;background:#101018;padding:20px;border:1px solid rgba(255,255,255,.08);border-radius:14px;';
-});
+const setMenu = (open) => {
+  links.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  toggle.textContent = open ? '✕' : '☰';
+};
+toggle?.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+// Cerrar al tocar un enlace del menú
+links?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
 
 // Marcas: letras alternadas con el color de cada marca (una pintada, una blanca)
 document.querySelectorAll('.brand').forEach((el) => {
